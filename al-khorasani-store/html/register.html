@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب - متجر الخراساني</title>
+    <meta name="description" content="إنشاء حساب جديد في متجر الخراساني">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1 class="logo">متجر الخراساني</h1>
+                    <p class="tagline">الأصالة والجودة من قلب اليمن السعيد</p>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
+                    <li><a href="products.html" class="nav-link">المنتجات</a></li>
+                    <li><a href="about.html" class="nav-link">عن المتجر</a></li>
+                    <li><a href="contact.html" class="nav-link">اتصل بنا</a></li>
+                    <li><a href="cart.html" class="nav-link cart-link">السلة <span id="cart-count">0</span></a></li>
+                    <li><a href="login.html" class="nav-link login-btn">تسجيل الدخول</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Register Section -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-form-container">
+                    <div class="auth-header">
+                        <h1>إنشاء حساب جديد</h1>
+                        <p>انضم إلينا واستمتع بتجربة تسوق مميزة</p>
+                    </div>
+
+                    <form class="auth-form" id="register-form">
+                        <div class="form-group">
+                            <label for="name">الاسم الكامل</label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="error-message" id="name-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+967 777 123456" required>
+                            <span class="error-message" id="phone-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">كلمة المرور</label>
+                            <div class="password-input">
+                                <input type="password" id="password" name="password" required>
+                                <button type="button" class="toggle-password" id="toggle-password">👁️</button>
+                            </div>
+                            <span class="error-message" id="password-error"></span>
+                            <small class="password-hint">يجب أن تحتوي على 8 أحرف على الأقل مع أرقام وحروف</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirm-password">تأكيد كلمة المرور</label>
+                            <div class="password-input">
+                                <input type="password" id="confirm-password" name="confirm-password" required>
+                                <button type="button" class="toggle-password">👁️</button>
+                            </div>
+                            <span class="error-message" id="confirm-password-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="agree-terms" name="agree-terms" required>
+                                <span class="checkmark"></span>
+                                أوافق على <a href="#" class="terms-link">الشروط والأحكام</a> و <a href="#" class="privacy-link">سياسة الخصوصية</a>
+                            </label>
+                            <span class="error-message" id="agree-terms-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                أريد الحصول على العروض والأخبار عبر البريد الإلكتروني
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">إنشاء الحساب</button>
+
+                        <div class="auth-divider">
+                            <span>أو</span>
+                        </div>
+
+                        <div class="social-login">
+                            <button type="button" class="btn btn-social btn-google">
+                                <span class="social-icon">G</span>
+                                التسجيل بحساب جوجل
+                            </button>
+                            <button type="button" class="btn btn-social btn-facebook">
+                                <span class="social-icon">f</span>
+                                التسجيل بحساب فيسبوك
+                            </button>
+                        </div>
+
+                        <div class="auth-footer">
+                            <p>لديك حساب بالفعل؟ <a href="login.html">تسجيل الدخول</a></p>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="auth-image">
+                    <img src="../images/backgrounds/sanaa_architecture.jpg" alt="صنعاء القديمة">
+                    <div class="auth-image-overlay">
+                        <h2>انضم إلى عائلة الخراساني</h2>
+                        <p>أنشئ حسابك الآن واستمتع بأفضل المنتجات اليمنية الأصيلة مع عروض وخصومات حصرية</p>
+                        <div class="benefits-list">
+                            <div class="benefit-item">
+                                <span class="benefit-icon">✓</span>
+                                <span>عروض حصرية للأعضاء</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">✓</span>
+                                <span>متابعة طلباتك بسهولة</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">✓</span>
+                                <span>نقاط مكافآت مع كل شراء</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms Modal -->
+    <div class="modal" id="terms-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <h2>الشروط والأحكام</h2>
+                <div class="terms-content">
+                    <h3>1. القبول بالشروط</h3>
+                    <p>باستخدام موقع متجر الخراساني، فإنك توافق على الالتزام بهذه الشروط والأحكام.</p>
+                    
+                    <h3>2. استخدام الموقع</h3>
+                    <p>يحق لك استخدام الموقع للأغراض الشخصية والتجارية المشروعة فقط.</p>
+                    
+                    <h3>3. المنتجات والأسعار</h3>
+                    <p>نحتفظ بالحق في تغيير الأسعار وتوفر المنتجات دون إشعار مسبق.</p>
+                    
+                    <h3>4. الدفع والشحن</h3>
+                    <p>جميع المدفوعات يجب أن تتم بالعملة المحلية. الشحن متاح داخل اليمن فقط.</p>
+                    
+                    <h3>5. سياسة الإرجاع</h3>
+                    <p>يمكن إرجاع المنتجات خلال 7 أيام من تاريخ الاستلام في حالة عدم الرضا.</p>
+                    
+                    <h3>6. الخصوصية</h3>
+                    <p>نحن ملتزمون بحماية خصوصيتك وبياناتك الشخصية وفقاً لسياسة الخصوصية.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>متجر الخراساني</h3>
+                    <p>أجود المنتجات اليمنية الأصيلة من قلب صنعاء العتيقة</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="../index.html">الرئيسية</a></li>
+                        <li><a href="products.html">المنتجات</a></li>
+                        <li><a href="about.html">عن المتجر</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>خدمة العملاء</h4>
+                    <ul>
+                        <li><a href="login.html">تسجيل الدخول</a></li>
+                        <li><a href="register.html">إنشاء حساب</a></li>
+                        <li><a href="cart.html">سلة التسوق</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تابعنا</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">فيسبوك</a>
+                        <a href="#" class="social-link">تويتر</a>
+                        <a href="#" class="social-link">إنستغرام</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 متجر الخراساني. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/auth.js"></script>
+    <script>
+        // Terms modal functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const termsLink = document.querySelector('.terms-link');
+            const termsModal = document.getElementById('terms-modal');
+            const closeModal = termsModal.querySelector('.close-modal');
+            
+            termsLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                termsModal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            });
+            
+            closeModal.addEventListener('click', function() {
+                termsModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+            
+            window.addEventListener('click', function(e) {
+                if (e.target === termsModal) {
+                    termsModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

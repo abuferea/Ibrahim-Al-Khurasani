@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر الخراساني - أجود المنتجات اليمنية الأصيلة</title>
+    <meta name="description" content="متجر الخراساني في صنعاء - أجود المنتجات اليمنية من قهوة وعسل وحلي فضية وملابس تراثية">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1 class="logo">متجر الخراساني</h1>
+                    <p class="tagline">الأصالة والجودة من قلب اليمن السعيد</p>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link active">الرئيسية</a></li>
+                    <li><a href="html/products.html" class="nav-link">المنتجات</a></li>
+                    <li><a href="html/about.html" class="nav-link">عن المتجر</a></li>
+                    <li><a href="html/contact.html" class="nav-link">اتصل بنا</a></li>
+                    <li><a href="html/cart.html" class="nav-link cart-link">السلة <span id="cart-count">0</span></a></li>
+                    <li><a href="html/login.html" class="nav-link login-btn">تسجيل الدخول</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title">أهلاً وسهلاً بكم في متجر الخراساني</h1>
+                <p class="hero-description">
+                    مرحباً بكم في متجر الخراساني، أجود المنتجات اليمنية الأصيلة من قلب صنعاء العتيقة. 
+                    عندنا كل شيء يخص التراث اليمني الأصيل، من القهوة الخولانية الفاخرة إلى الحلي الفضية المصنوعة بأيدي حرفيين مهرة.
+                </p>
+                <div class="hero-buttons">
+                    <a href="html/products.html" class="btn btn-primary">تصفح المنتجات</a>
+                    <a href="html/about.html" class="btn btn-secondary">تعرف علينا</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">منتجاتنا المميزة</h2>
+            <div class="products-grid">
+                <article class="product-card" data-product="coffee">
+                    <div class="product-image">
+                        <img src="images/products/yemeni_coffee.png" alt="قهوة يمنية خولانية">
+                        <div class="product-overlay">
+                            <button class="btn btn-small add-to-cart" data-product-id="1">أضف للسلة</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>قهوة خولانية فاخرة</h3>
+                        <p>من أجود أنواع القهوة في العالم، محمصة بالطريقة التقليدية</p>
+                        <div class="product-price">
+                            <span class="price">2500 ريال</span>
+                            <span class="unit">للكيلو</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-product="honey">
+                    <div class="product-image">
+                        <img src="images/products/yemeni_honey.png" alt="عسل يمني سدر">
+                        <div class="product-overlay">
+                            <button class="btn btn-small add-to-cart" data-product-id="2">أضف للسلة</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>عسل سدر دوعني أصلي</h3>
+                        <p>من أفضل أنواع العسل في العالم، طبيعي 100%</p>
+                        <div class="product-price">
+                            <span class="price">8000 ريال</span>
+                            <span class="unit">للكيلو</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-product="jewelry">
+                    <div class="product-image">
+                        <img src="images/products/silver_ring.jpg" alt="خاتم فضة يمني">
+                        <div class="product-overlay">
+                            <button class="btn btn-small add-to-cart" data-product-id="3">أضف للسلة</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>خاتم فضة بالعقيق الأصلي</h3>
+                        <p>صناعة يدوية تراثية بأحجار العقيق اليمني الأصلي</p>
+                        <div class="product-price">
+                            <span class="price">15000 ريال</span>
+                            <span class="unit">للقطعة</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-product="clothing">
+                    <div class="product-image">
+                        <img src="images/products/traditional_clothing.jpg" alt="ثوب يمني تراثي">
+                        <div class="product-overlay">
+                            <button class="btn btn-small add-to-cart" data-product-id="4">أضف للسلة</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>ثوب يمني تراثي</h3>
+                        <p>ثوب رجالي فاخر بقماش عالي الجودة وتطريز يدوي</p>
+                        <div class="product-price">
+                            <span class="price">12000 ريال</span>
+                            <span class="unit">للقطعة</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-preview">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>عن متجر الخراساني</h2>
+                    <p>
+                        متجر الخراساني تأسس في قلب صنعاء القديمة منذ أكثر من 30 سنة، وهو من أعرق المتاجر المتخصصة في بيع المنتجات اليمنية الأصيلة. 
+                        نحرص على تقديم أجود المنتجات بأسعار عادلة، ونحافظ على التراث اليمني العريق من خلال منتجاتنا المميزة.
+                    </p>
+                    <a href="html/about.html" class="btn btn-outline">اقرأ المزيد</a>
+                </div>
+                <div class="about-image">
+                    <img src="images/backgrounds/sanaa_architecture.jpg" alt="صنعاء القديمة">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offer -->
+    <section class="special-offer">
+        <div class="container">
+            <div class="offer-content">
+                <h2>عرض خاص</h2>
+                <p>خصم 20% على جميع منتجات القهوة والعسل</p>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <span id="days">00</span>
+                        <label>يوم</label>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="hours">00</span>
+                        <label>ساعة</label>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="minutes">00</span>
+                        <label>دقيقة</label>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="seconds">00</span>
+                        <label>ثانية</label>
+                    </div>
+                </div>
+                <a href="html/products.html" class="btn btn-primary">استفد من العرض</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="contact-info">
+        <div class="container">
+            <h2>تواصل معنا</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <h3>العنوان</h3>
+                    <p>صنعاء القديمة، شارع الزبيري<br>بجانب الجامع الكبير</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <h3>الهاتف</h3>
+                    <p>+967 1 234567<br>+967 777 123456</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">⏰</div>
+                    <h3>ساعات العمل</h3>
+                    <p>السبت - الخميس: 8:00 ص - 8:00 م<br>الجمعة: 2:00 ظ - 8:00 م</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <h3>البريد الإلكتروني</h3>
+                    <p>info@alkhorasani-store.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>متجر الخراساني</h3>
+                    <p>أجود المنتجات اليمنية الأصيلة من قلب صنعاء العتيقة</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="html/products.html">المنتجات</a></li>
+                        <li><a href="html/about.html">عن المتجر</a></li>
+                        <li><a href="html/contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>خدمة العملاء</h4>
+                    <ul>
+                        <li><a href="html/login.html">تسجيل الدخول</a></li>
+                        <li><a href="html/register.html">إنشاء حساب</a></li>
+                        <li><a href="html/cart.html">سلة التسوق</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تابعنا</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">فيسبوك</a>
+                        <a href="#" class="social-link">تويتر</a>
+                        <a href="#" class="social-link">إنستغرام</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 متجر الخراساني. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
+

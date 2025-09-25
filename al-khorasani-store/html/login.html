@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول - متجر الخراساني</title>
+    <meta name="description" content="تسجيل الدخول إلى حسابك في متجر الخراساني">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1 class="logo">متجر الخراساني</h1>
+                    <p class="tagline">الأصالة والجودة من قلب اليمن السعيد</p>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
+                    <li><a href="products.html" class="nav-link">المنتجات</a></li>
+                    <li><a href="about.html" class="nav-link">عن المتجر</a></li>
+                    <li><a href="contact.html" class="nav-link">اتصل بنا</a></li>
+                    <li><a href="cart.html" class="nav-link cart-link">السلة <span id="cart-count">0</span></a></li>
+                    <li><a href="login.html" class="nav-link login-btn active">تسجيل الدخول</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Login Section -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-form-container">
+                    <div class="auth-header">
+                        <h1>تسجيل الدخول</h1>
+                        <p>أدخل بياناتك للدخول إلى حسابك</p>
+                    </div>
+
+                    <form class="auth-form" id="login-form">
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">كلمة المرور</label>
+                            <div class="password-input">
+                                <input type="password" id="password" name="password" required>
+                                <button type="button" class="toggle-password" id="toggle-password">👁️</button>
+                            </div>
+                            <span class="error-message" id="password-error"></span>
+                        </div>
+
+                        <div class="form-options">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="remember-me">
+                                <span class="checkmark"></span>
+                                تذكرني
+                            </label>
+                            <a href="#" class="forgot-password">نسيت كلمة المرور؟</a>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">تسجيل الدخول</button>
+
+                        <div class="auth-divider">
+                            <span>أو</span>
+                        </div>
+
+                        <div class="social-login">
+                            <button type="button" class="btn btn-social btn-google">
+                                <span class="social-icon">G</span>
+                                الدخول بحساب جوجل
+                            </button>
+                            <button type="button" class="btn btn-social btn-facebook">
+                                <span class="social-icon">f</span>
+                                الدخول بحساب فيسبوك
+                            </button>
+                        </div>
+
+                        <div class="auth-footer">
+                            <p>ليس لديك حساب؟ <a href="register.html">إنشاء حساب جديد</a></p>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="auth-image">
+                    <img src="../images/backgrounds/sanaa_old_city_1.jpeg" alt="صنعاء القديمة">
+                    <div class="auth-image-overlay">
+                        <h2>مرحباً بك مرة أخرى</h2>
+                        <p>سجل دخولك واستمتع بتجربة تسوق مميزة لأجود المنتجات اليمنية الأصيلة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>متجر الخراساني</h3>
+                    <p>أجود المنتجات اليمنية الأصيلة من قلب صنعاء العتيقة</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="../index.html">الرئيسية</a></li>
+                        <li><a href="products.html">المنتجات</a></li>
+                        <li><a href="about.html">عن المتجر</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>خدمة العملاء</h4>
+                    <ul>
+                        <li><a href="login.html">تسجيل الدخول</a></li>
+                        <li><a href="register.html">إنشاء حساب</a></li>
+                        <li><a href="cart.html">سلة التسوق</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تابعنا</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">فيسبوك</a>
+                        <a href="#" class="social-link">تويتر</a>
+                        <a href="#" class="social-link">إنستغرام</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 متجر الخراساني. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المنتجات - متجر الخراساني</title>
+    <meta name="description" content="تصفح جميع منتجات متجر الخراساني من قهوة وعسل وحلي فضية وملابس تراثية يمنية أصيلة">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1 class="logo">متجر الخراساني</h1>
+                    <p class="tagline">الأصالة والجودة من قلب اليمن السعيد</p>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
+                    <li><a href="products.html" class="nav-link active">المنتجات</a></li>
+                    <li><a href="about.html" class="nav-link">عن المتجر</a></li>
+                    <li><a href="contact.html" class="nav-link">اتصل بنا</a></li>
+                    <li><a href="cart.html" class="nav-link cart-link">السلة <span id="cart-count">0</span></a></li>
+                    <li><a href="login.html" class="nav-link login-btn">تسجيل الدخول</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>منتجاتنا</h1>
+            <p>اكتشف أجود المنتجات اليمنية الأصيلة</p>
+        </div>
+    </section>
+
+    <!-- Products Filter -->
+    <section class="products-filter">
+        <div class="container">
+            <div class="filter-controls">
+                <button class="filter-btn active" data-category="all">جميع المنتجات</button>
+                <button class="filter-btn" data-category="coffee">القهوة</button>
+                <button class="filter-btn" data-category="honey">العسل</button>
+                <button class="filter-btn" data-category="jewelry">الحلي والمجوهرات</button>
+                <button class="filter-btn" data-category="clothing">الملابس التراثية</button>
+            </div>
+            <div class="search-box">
+                <input type="text" id="product-search" placeholder="ابحث عن منتج...">
+                <button class="search-btn">🔍</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid" id="products-grid">
+                <!-- Coffee Products -->
+                <article class="product-card" data-category="coffee">
+                    <div class="product-image">
+                        <img src="../images/products/yemeni_coffee.png" alt="قهوة خولانية فاخرة">
+                        <div class="product-overlay">
+                            <button class="btn btn-small add-to-cart" data-product-id="1">أضف للسلة</button>
+                            <button class="btn btn-small btn-outline view-details" data-product="coffee1">التفاصيل</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>قهوة خولانية فاخرة</h3>
+                        <p>من أجود أنواع القهوة في العالم، محمصة بالطريقة التقليدية</p>
+                        <div class="product-price">
+                            <span class="price">2500 ريال</span>
+                            <span class="unit">للكيلو</span>
+                        </div>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-text">(25 تقييم)</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="coffee">
+                    <div class="product-image">
+                        <img src="../images/products/yemeni_coffee.png" alt="قهوة مطحونة طازجة">
+                        <div class="product-overlay">
+                            <button class="btn btn-small add-to-cart" data-product-id="5">أضف للسلة</button>
+                            <button class="btn btn-small btn-outline view-details" data-product="coffee2">التفاصيل</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>قهوة مطحونة طازجة</h3>
+                        <p>قهوة مطحونة حديثاً، جاهزة للتحضير المباشر</p>
+                        <div class="product-price">
+                            <span class="price">2200 ريال</span>
+                            <span class="unit">للكيلو</span>
+                        </div>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-text">(18 تقييم)</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Honey Products -->
+                <article class="product-card" data-category="honey">
+                    <div class="product-image">
+                        <img src="../images/products/yemeni_honey.png" alt="عسل سدر دوعني">
+                        <div class="product-overlay">
+                            <button class="btn btn-small add-to-cart" data-product-id="2">أضف للسلة</button>
+                            <button class="btn btn-small btn-outline view-details" data-product="honey1">التفاصيل</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>عسل سدر دوعني أصلي</h3>
+                        <p>من أفضل أنواع العسل في العالم، طبيعي 100%</p>
+                        <div class="product-price">
+                            <span class="price">8000 ريال</span>
+                            <span class="unit">للكيلو</span>
+                        </div>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-text">(42 تقييم)</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="honey">
+                    <div class="product-image">
+                        <img src="../images/products/yemeni_honey.png" alt="عسل سمر جبلي">
+                        <div class="product-overlay">
+                            <button class="btn btn-small add-to-cart" data-product-id="6">أضف للسلة</button>
+                            <button class="btn btn-small btn-outline view-details" data-product="honey2">التفاصيل</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>عسل سمر جبلي</h3>
+                        <p>عسل طبيعي من أشجار السمر في الجبال اليمنية</p>
+                        <div class="product-price">
+                            <span class="price">6500 ريال</span>
+                            <span class="unit">للكيلو</span>
+                        </div>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-text">(31 تقييم)</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Jewelry Products -->
+                <article class="product-card" data-category="jewelry">
+                    <div class="product-image">
+                        <img src="../images/products/silver_ring.jpg" alt="خاتم فضة بالعقيق">
+                        <div class="product-overlay">
+                            <button class="btn btn-small add-to-cart" data-product-id="3">أضف للسلة</button>
+                            <button class="btn btn-small btn-outline view-details" data-product="jewelry1">التفاصيل</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>خاتم فضة بالعقيق الأصلي</h3>
+                        <p>صناعة يدوية تراثية بأحجار العقيق اليمني الأصلي</p>
+                        <div class="product-price">
+                            <span class="price">15000 ريال</span>
+                            <span class="unit">للقطعة</span>
+                        </div>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-text">(15 تقييم)</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="jewelry">
+                    <div class="product-image">
+                        <img src="../images/products/silver_jewelry.jpg" alt="قلادة فضية تراثية">
+                        <div class="product-overlay">
+                            <button class="btn btn-small add-to-cart" data-product-id="7">أضف للسلة</button>
+                            <button class="btn btn-small btn-outline view-details" data-product="jewelry2">التفاصيل</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>قلادة فضية تراثية</h3>
+                        <p>قلادة فضة مزخرفة بالطريقة التقليدية اليمنية</p>
+                        <div class="product-price">
+                            <span class="price">25000 ريال</span>
+                            <span class="unit">للقطعة</span>
+                        </div>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-text">(12 تقييم)</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Clothing Products -->
+                <article class="product-card" data-category="clothing">
+                    <div class="product-image">
+                        <img src="../images/products/traditional_clothing.jpg" alt="ثوب يمني تراثي">
+                        <div class="product-overlay">
+                            <button class="btn btn-small add-to-cart" data-product-id="4">أضف للسلة</button>
+                            <button class="btn btn-small btn-outline view-details" data-product="clothing1">التفاصيل</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>ثوب يمني تراثي</h3>
+                        <p>ثوب رجالي فاخر بقماش عالي الجودة وتطريز يدوي</p>
+                        <div class="product-price">
+                            <span class="price">12000 ريال</span>
+                            <span class="unit">للقطعة</span>
+                        </div>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-text">(8 تقييم)</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="clothing">
+                    <div class="product-image">
+                        <img src="../images/products/traditional_clothing.jpg" alt="جبة تراثية مطرزة">
+                        <div class="product-overlay">
+                            <button class="btn btn-small add-to-cart" data-product-id="8">أضف للسلة</button>
+                            <button class="btn btn-small btn-outline view-details" data-product="clothing2">التفاصيل</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>جبة تراثية مطرزة</h3>
+                        <p>جبة يمنية بتطريز يدوي فاخر وألوان تراثية</p>
+                        <div class="product-price">
+                            <span class="price">18000 ريال</span>
+                            <span class="unit">للقطعة</span>
+                        </div>
+                        <div class="product-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="rating-text">(6 تقييم)</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Details Modal -->
+    <div class="modal" id="product-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body" id="modal-body">
+                <!-- Product details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>متجر الخراساني</h3>
+                    <p>أجود المنتجات اليمنية الأصيلة من قلب صنعاء العتيقة</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="../index.html">الرئيسية</a></li>
+                        <li><a href="products.html">المنتجات</a></li>
+                        <li><a href="about.html">عن المتجر</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>خدمة العملاء</h4>
+                    <ul>
+                        <li><a href="login.html">تسجيل الدخول</a></li>
+                        <li><a href="register.html">إنشاء حساب</a></li>
+                        <li><a href="cart.html">سلة التسوق</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تابعنا</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">فيسبوك</a>
+                        <a href="#" class="social-link">تويتر</a>
+                        <a href="#" class="social-link">إنستغرام</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 متجر الخراساني. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/products.js"></script>
+</body>
+</html>
+

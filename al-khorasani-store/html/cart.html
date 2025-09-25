@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سلة التسوق - متجر الخراساني</title>
+    <meta name="description" content="سلة التسوق في متجر الخراساني">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1 class="logo">متجر الخراساني</h1>
+                    <p class="tagline">الأصالة والجودة من قلب اليمن السعيد</p>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
+                    <li><a href="products.html" class="nav-link">المنتجات</a></li>
+                    <li><a href="about.html" class="nav-link">عن المتجر</a></li>
+                    <li><a href="contact.html" class="nav-link">اتصل بنا</a></li>
+                    <li><a href="cart.html" class="nav-link cart-link active">السلة <span id="cart-count">0</span></a></li>
+                    <li><a href="login.html" class="nav-link login-btn">تسجيل الدخول</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>سلة التسوق</h1>
+            <p>راجع منتجاتك المختارة وأكمل عملية الشراء</p>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <div class="container">
+            <!-- Empty Cart Message -->
+            <div class="empty-cart" id="empty-cart" style="display: none;">
+                <div class="empty-cart-content">
+                    <div class="empty-cart-icon">🛒</div>
+                    <h2>سلة التسوق فارغة</h2>
+                    <p>لم تقم بإضافة أي منتجات إلى سلة التسوق بعد</p>
+                    <a href="products.html" class="btn btn-primary">تصفح المنتجات</a>
+                </div>
+            </div>
+
+            <!-- Cart Content -->
+            <div class="cart-content" id="cart-summary">
+                <div class="cart-items-section">
+                    <div class="cart-header">
+                        <h2>المنتجات المختارة</h2>
+                        <button class="btn btn-outline btn-small" onclick="clearCart()">حذف الكل</button>
+                    </div>
+                    
+                    <div class="cart-items" id="cart-items">
+                        <!-- Cart items will be loaded here by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="cart-sidebar">
+                    <!-- Order Summary -->
+                    <div class="order-summary">
+                        <h3>ملخص الطلب</h3>
+                        <div class="summary-row">
+                            <span>المجموع الفرعي:</span>
+                            <span class="total-amount" id="cart-total">0 ريال</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>الشحن:</span>
+                            <span>مجاني</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>الضريبة:</span>
+                            <span>0 ريال</span>
+                        </div>
+                        <hr>
+                        <div class="summary-row total-row">
+                            <span>المجموع الكلي:</span>
+                            <span class="total-amount">0 ريال</span>
+                        </div>
+                        
+                        <button class="btn btn-primary btn-full" onclick="proceedToCheckout()">
+                            إتمام الشراء
+                        </button>
+                        
+                        <a href="products.html" class="btn btn-outline btn-full">
+                            متابعة التسوق
+                        </a>
+                    </div>
+
+                    <!-- Discount Code -->
+                    <div class="discount-section">
+                        <h4>كود الخصم</h4>
+                        <div class="discount-input">
+                            <input type="text" id="discount-code" placeholder="أدخل كود الخصم">
+                            <button class="btn btn-secondary" onclick="applyDiscount()">تطبيق</button>
+                        </div>
+                        <div class="discount-codes">
+                            <small>أكواد الخصم المتاحة:</small>
+                            <ul>
+                                <li><code>WELCOME20</code> - خصم 20%</li>
+                                <li><code>HONEY15</code> - خصم 15%</li>
+                                <li><code>COFFEE10</code> - خصم 10%</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Payment Methods -->
+                    <div class="payment-methods">
+                        <h4>طرق الدفع المقبولة</h4>
+                        <div class="payment-icons">
+                            <div class="payment-icon">💳</div>
+                            <div class="payment-icon">💰</div>
+                            <div class="payment-icon">📱</div>
+                        </div>
+                        <small>نقبل الدفع نقداً عند الاستلام أو التحويل البنكي</small>
+                    </div>
+
+                    <!-- Shipping Info -->
+                    <div class="shipping-info">
+                        <h4>معلومات الشحن</h4>
+                        <div class="shipping-option">
+                            <div class="shipping-icon">🚚</div>
+                            <div class="shipping-details">
+                                <strong>الشحن المجاني</strong>
+                                <p>التوصيل خلال 2-3 أيام عمل داخل صنعاء</p>
+                            </div>
+                        </div>
+                        <div class="shipping-option">
+                            <div class="shipping-icon">📦</div>
+                            <div class="shipping-details">
+                                <strong>الاستلام من المتجر</strong>
+                                <p>متاح يومياً من 8 صباحاً إلى 8 مساءً</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <div class="container">
+            <h2 class="section-title">منتجات قد تعجبك</h2>
+            <div class="products-grid">
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="../images/products/yemeni_coffee.png" alt="قهوة خولانية">
+                        <div class="product-overlay">
+                            <button class="btn btn-small add-to-cart" data-product-id="1">أضف للسلة</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>قهوة خولانية فاخرة</h3>
+                        <p>من أجود أنواع القهوة في العالم</p>
+                        <div class="product-price">
+                            <span class="price">2500 ريال</span>
+                            <span class="unit">للكيلو</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="../images/products/yemeni_honey.png" alt="عسل سدر">
+                        <div class="product-overlay">
+                            <button class="btn btn-small add-to-cart" data-product-id="2">أضف للسلة</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>عسل سدر دوعني</h3>
+                        <p>من أفضل أنواع العسل في العالم</p>
+                        <div class="product-price">
+                            <span class="price">8000 ريال</span>
+                            <span class="unit">للكيلو</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="../images/products/silver_ring.jpg" alt="خاتم فضة">
+                        <div class="product-overlay">
+                            <button class="btn btn-small add-to-cart" data-product-id="3">أضف للسلة</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>خاتم فضة بالعقيق</h3>
+                        <p>صناعة يدوية تراثية</p>
+                        <div class="product-price">
+                            <span class="price">15000 ريال</span>
+                            <span class="unit">للقطعة</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>متجر الخراساني</h3>
+                    <p>أجود المنتجات اليمنية الأصيلة من قلب صنعاء العتيقة</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="../index.html">الرئيسية</a></li>
+                        <li><a href="products.html">المنتجات</a></li>
+                        <li><a href="about.html">عن المتجر</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>خدمة العملاء</h4>
+                    <ul>
+                        <li><a href="login.html">تسجيل الدخول</a></li>
+                        <li><a href="register.html">إنشاء حساب</a></li>
+                        <li><a href="cart.html">سلة التسوق</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تابعنا</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">فيسبوك</a>
+                        <a href="#" class="social-link">تويتر</a>
+                        <a href="#" class="social-link">إنستغرام</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 متجر الخراساني. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/cart.js"></script>
+    <script>
+        // Cart page specific styles
+        const cartStyles = `
+            .cart-section {
+                padding: 2rem 0 4rem;
+                min-height: 60vh;
+            }
+            
+            .empty-cart {
+                text-align: center;
+                padding: 4rem 2rem;
+            }
+            
+            .empty-cart-content {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            
+            .empty-cart-icon {
+                font-size: 4rem;
+                margin-bottom: 1rem;
+                opacity: 0.5;
+            }
+            
+            .empty-cart h2 {
+                color: #2D5016;
+                margin-bottom: 1rem;
+            }
+            
+            .empty-cart p {
+                color: #666;
+                margin-bottom: 2rem;
+            }
+            
+            .cart-content {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                gap: 3rem;
+                align-items: start;
+            }
+            
+            .cart-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 2rem;
+                padding-bottom: 1rem;
+                border-bottom: 2px solid #f0f0f0;
+            }
+            
+            .cart-header h2 {
+                color: #2D5016;
+                margin-bottom: 0;
+            }
+            
+            .cart-item {
+                display: grid;
+                grid-template-columns: 100px 1fr auto;
+                gap: 1rem;
+                padding: 1.5rem;
+                background: white;
+                border-radius: 10px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                margin-bottom: 1rem;
+                transition: transform 0.3s ease;
+            }
+            
+            .cart-item:hover {
+                transform: translateY(-2px);
+            }
+            
+            .cart-item-image {
+                width: 100px;
+                height: 100px;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+            
+            .cart-item-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            
+            .cart-item-details h3 {
+                color: #2D5016;
+                margin-bottom: 0.5rem;
+                font-size: 1.1rem;
+            }
+            
+            .cart-item-details p {
+                color: #666;
+                font-size: 0.9rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            .cart-item-price {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            
+            .cart-item-controls {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            .quantity-controls {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                background: #f8f9fa;
+                border-radius: 20px;
+                padding: 0.25rem;
+            }
+            
+            .quantity-btn {
+                width: 30px;
+                height: 30px;
+                border: none;
+                background: #2D5016;
+                color: white;
+                border-radius: 50%;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+            }
+            
+            .quantity-btn:hover {
+                background: #4A7C23;
+            }
+            
+            .quantity {
+                min-width: 30px;
+                text-align: center;
+                font-weight: bold;
+            }
+            
+            .item-total {
+                font-weight: bold;
+                color: #D4AF37;
+                font-size: 1.1rem;
+            }
+            
+            .remove-btn {
+                background: #dc3545;
+                color: white;
+                border: none;
+                padding: 0.25rem 0.75rem;
+                border-radius: 15px;
+                cursor: pointer;
+                font-size: 0.8rem;
+                transition: background 0.3s ease;
+            }
+            
+            .remove-btn:hover {
+                background: #c82333;
+            }
+            
+            .cart-sidebar {
+                position: sticky;
+                top: 100px;
+            }
+            
+            .order-summary,
+            .discount-section,
+            .payment-methods,
+            .shipping-info {
+                background: white;
+                padding: 1.5rem;
+                border-radius: 10px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                margin-bottom: 1.5rem;
+            }
+            
+            .order-summary h3,
+            .discount-section h4,
+            .payment-methods h4,
+            .shipping-info h4 {
+                color: #2D5016;
+                margin-bottom: 1rem;
+            }
+            
+            .summary-row {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 0.5rem;
+            }
+            
+            .total-row {
+                font-weight: bold;
+                font-size: 1.1rem;
+                color: #2D5016;
+            }
+            
+            .discount-input {
+                display: flex;
+                gap: 0.5rem;
+                margin-bottom: 1rem;
+            }
+            
+            .discount-input input {
+                flex: 1;
+                padding: 0.5rem;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+            }
+            
+            .discount-codes ul {
+                list-style: none;
+                padding: 0;
+            }
+            
+            .discount-codes li {
+                margin-bottom: 0.25rem;
+                font-size: 0.8rem;
+            }
+            
+            .discount-codes code {
+                background: #f8f9fa;
+                padding: 0.1rem 0.3rem;
+                border-radius: 3px;
+                font-weight: bold;
+                color: #2D5016;
+            }
+            
+            .payment-icons {
+                display: flex;
+                gap: 1rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            .payment-icon {
+                font-size: 1.5rem;
+                padding: 0.5rem;
+                background: #f8f9fa;
+                border-radius: 5px;
+            }
+            
+            .shipping-option {
+                display: flex;
+                gap: 1rem;
+                margin-bottom: 1rem;
+                padding: 0.75rem;
+                background: #f8f9fa;
+                border-radius: 8px;
+            }
+            
+            .shipping-icon {
+                font-size: 1.5rem;
+            }
+            
+            .shipping-details strong {
+                color: #2D5016;
+                display: block;
+                margin-bottom: 0.25rem;
+            }
+            
+            .shipping-details p {
+                margin: 0;
+                font-size: 0.9rem;
+                color: #666;
+            }
+            
+            .related-products {
+                background: #f8f9fa;
+                padding: 3rem 0;
+            }
+            
+            .related-products .products-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+            
+            @media (max-width: 768px) {
+                .cart-content {
+                    grid-template-columns: 1fr;
+                    gap: 2rem;
+                }
+                
+                .cart-item {
+                    grid-template-columns: 80px 1fr;
+                    gap: 1rem;
+                }
+                
+                .cart-item-controls {
+                    grid-column: 1 / -1;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin-top: 1rem;
+                }
+                
+                .cart-sidebar {
+                    position: static;
+                }
+                
+                .related-products .products-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        `;
+        
+        const styleSheet = document.createElement('style');
+        styleSheet.textContent = cartStyles;
+        document.head.appendChild(styleSheet);
+    </script>
+</body>
+</html>
+
